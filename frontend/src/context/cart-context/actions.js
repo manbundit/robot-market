@@ -21,8 +21,7 @@ const incrementItemInCart = (dispatch, payload) => {
   }
   dispatch({ type: ActionTypes.INCREMENT_ITEM_IN_CART, payload })
 }
-const decrementItemInCart = (dispatch, payload) => {
-  console.log(payload)
+const decrementItemInCart = (dispatch, payload) => {  
   if (payload.quantity <= 1) {
     dispatch({ type: ActionTypes.REMOVE_ITEM_FROM_CART, payload })  
     return
