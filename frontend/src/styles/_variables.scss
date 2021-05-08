@@ -1,0 +1,13 @@
+$ci: #ff6969;
+$background: #828282;
+
+@mixin content-width() {
+  max-width: 1280px;
+  margin: auto;
+  padding: 40px;
+}
+
+@mixin blurred-bg() {
+  background: rgba(39, 39, 39, 0.75);
+  backdrop-filter: blur(10px);
+}

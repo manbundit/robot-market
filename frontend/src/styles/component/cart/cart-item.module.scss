@@ -1,0 +1,95 @@
+
+@import 'styles/_variables.scss';
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .imgCol {
+    width: 100%;
+    max-width: 80px;    
+    padding: 10px;
+  }
+  .thumb {
+    border-radius: 16px;
+    background: rgb(231, 231, 231);
+    width: 100%;
+    position: relative;
+    padding-top: 100%;
+    .img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;      
+    }
+  }
+  .detail {
+    max-width: calc(100% - 90px);
+    .name {
+      width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.quantityWrapper {
+  margin: 10px;
+  margin-top: 0;
+  display: flex;
+  width: 100%;
+  .subtract, .add {
+    cursor: pointer;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    &:hover {
+      border-color: $ci;
+      color: white;
+      background: $ci;      
+    }
+    &.add {      
+      &:after {
+        content: "+";
+      }
+    }
+    &:after {
+      font-size: 24px;
+      content: "-";      
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+    }    
+  }
+  .subtract {
+    border-right: none;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+  .add {
+    border-left: none;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  .count {
+    margin: 0 20px;
+  }
+  .totalPrice {
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,24 @@
+@import 'styles/_variables.scss';
+
+.filterWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  @include content-width();
+  padding-bottom: 0;
+  span {
+    cursor: pointer;
+    padding: 6px 20px;
+    font-size: 20px;
+    background: white;
+    color: black;
+    border-radius: 8px;
+    border: 1px solid rgb(37, 37, 37);
+    transition: all 0.3s;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    &:hover, &.active {
+      color: white;
+      background: $ci;
+    }
+  }
+}

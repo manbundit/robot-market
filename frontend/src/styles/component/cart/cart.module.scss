@@ -1,0 +1,58 @@
+@import 'styles/_variables.scss';
+
+.cart {
+  position: fixed;
+  overflow: auto;
+  top: 100px;
+  right: 0;
+  padding: 40px 20px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+  visibility: hidden;
+  transform: translateX(300px);
+  max-width: 300px;
+  width: 100%;
+  max-height: calc(100% - 100px);
+  height: 100%;
+  opacity: 0;
+  background: $background;
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,.5);
+  transition: all 0.3s;
+  &.active {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+  }
+  .emptyCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;    
+    color: white;
+    text-align: center;
+  }
+}
+
+.totalContainer {
+  @include blurred-bg();
+  color: white;
+  padding: 20px 0;
+  position: sticky;
+  margin-top: auto;
+  bottom: 0;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 20px;  
+  .total {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .price {
+      float: right;
+      text-align: right;
+    }
+  }  
+}

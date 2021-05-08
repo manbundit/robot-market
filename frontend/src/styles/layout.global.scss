@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700&display=swap');
+@import 'styles/_variables.scss';
+
+html, body {
+  width: 100%;
+  margin: 0;
+  min-height: 100%;
+  font-family: 'Prompt', sans-serif;
+}
+
+body {
+  padding-top: 100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.fixed {
+  position: fixed;
+  padding: 0 40px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background: darken($background, 20%);
+  color: white; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cartBtn {
+  position: relative;
+  transition: all 0.2s cubic-bezier(.47,-0.53,.57,1.7);
+  transform-origin: right;
+  &.ripple {
+    transform: scale(1.2) !important;
+  }
+  .bubble {
+    pointer-events: none;
+    position: absolute;
+    padding: 2px 8px;
+    border-radius: 1em;
+    top: -10px;
+    right: -10px;
+    font-size: 12px;
+    color: white;
+    background: $ci;
+  }
+  button {
+    border-radius: 16px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: inherit;
+    margin: 0;
+    -webkit-appearance: none;
+    color: white;
+    border: 1px solid white;
+    background: transparent;
+    transition: all 0.3s ease-out;    
+    &:hover, &.active {
+      background: white;
+      color: $ci;
+    }
+  }
+}
